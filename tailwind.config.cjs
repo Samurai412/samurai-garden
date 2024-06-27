@@ -18,19 +18,17 @@ module.exports = {
         "8xl": "88rem",
       },
       fontFamily: {
-        sans: ["ui-sans-serif", ...defaultTheme.fontFamily.sans],
-        serif: ["ui-serif", ...defaultTheme.fontFamily.serif],
-        mono: ["ui-monospace", ...defaultTheme.fontFamily.mono],
-        headings: ["-apple-system", ...defaultTheme.fontFamily.sans],
+         sans: ["Roboto","ui-sans-serif", ...defaultTheme.fontFamily.sans],
+        headings: ["Kanit","-apple-system", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         background: {
-          DEFAULT: colors.white,
-          dark: colors.slate[900],
+          DEFAULT: "#EAE7B1",
+          dark: "#3C6255",
         },
         primary: {
-          DEFAULT: colors.gray[700],
-          dark: colors.gray[300],
+          DEFAULT: "#3C6255",
+          dark: "#A6BB8D",
         },
         secondary: {
           DEFAULT: colors.sky[400],
