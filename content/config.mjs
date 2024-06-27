@@ -6,5 +6,5 @@ const config = {
   showSidebar: true,
 };
 
-export default {};
+export default config;
 
