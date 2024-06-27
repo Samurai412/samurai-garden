@@ -31,8 +31,8 @@ module.exports = {
           dark: "#A6BB8D",
         },
         secondary: {
-          DEFAULT: colors.sky[400],
-          dark: colors.sky[400],
+          DEFAULT: "#22c55e",
+          dark: "#22c55e",
         },
       },
     },
