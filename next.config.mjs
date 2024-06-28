@@ -1,19 +1,12 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
 
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
-});
-
-export default withMDX({
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+export default {
   eslint: {
     ignoreDuringBuilds: true,
   },
   webpack: (config) => {
     config.infrastructureLogging = {
-      level: 'error',
+      level: "error",
     };
     return config;
   },
-});
+};
