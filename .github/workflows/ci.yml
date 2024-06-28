@@ -1,4 +1,4 @@
-name: Next.js Config Test
+name: Next.js Build
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  test-next-config:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +23,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Verify installation of @next/mdx and @mdx-js/loader
+        run: npm list @next/mdx @mdx-js/loader
 
       - name: Build the project
         run: npm run build
