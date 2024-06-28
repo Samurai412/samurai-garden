@@ -11,8 +11,6 @@
     "generate": "cross-env NODE_OPTIONS=\"--experimental-json-modules --experimental-modules\" node -r esbuild-register ./scripts/prebuild.mjs"
   },
   "dependencies": {
-    "@next/mdx": "14.2.4",
-    "@mdx-js/loader": "3.0.1",
     "@heroicons/react": "^1.0.6",
     "@portaljs/core": "^1.0.9",
     "@portaljs/remark-callouts": "^1.0.5",
