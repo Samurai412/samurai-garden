@@ -1,3 +1,10 @@
+---
+title: "# Lesson #1: Poetry as Play"
+date: 2022-11-29
+authors:
+  - Remi
+---
+
 # Lesson #1: Poetry as Play
 
 ![](https://ci3.googleusercontent.com/meips/ADKq_NZZxA2AHe_rq6pUyuGcLYyuNmK7PkSCgQvoInbvr3kM3-xXCCXXT_ocf3xwUdEtiJ6ddtC3nmmAUCkrQq346ceaqum4FVD701l5VJ6jcDd7SqoUww=s0-d-e1-ft#https://mailparrot-cdn.reedsy.com/image/2258/large_poetry1.jpg)
