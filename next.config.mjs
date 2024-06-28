@@ -1,11 +1,8 @@
-import withMDX from '@next/mdx';
-
-const withMDXConfig = withMDX({
-  extension: /\.mdx?$/,
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/
 });
 
-export default {
-  ...withMDXConfig,
+module.exports = withMDX({
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   eslint: {
     ignoreDuringBuilds: true,
@@ -16,4 +13,5 @@ export default {
     };
     return config;
   },
-};
+});
+
