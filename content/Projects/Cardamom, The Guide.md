@@ -316,8 +316,10 @@ The party has access to a small deck of shared cards:
 # Resources
 
 [Current template for card](https://www.canva.com/design/DAGKY_gRYXY/_94EWTQhwyHX3JQDmUk3_g/view?utm_content=DAGKY_gRYXY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview)
+
 [Soul Guardian cards - WIP](https://samurai-garden.vercel.app/Projects/Soul%20Guardian%20Cards)
-[https://www.hostize.com/v/t5LhHqixm4/cardamom-6-1-pdf](Character Sheet)
+
+[Character Sheet](https://www.hostize.com/v/t5LhHqixm4/cardamom-6-1-pdf)
 
 # Disclaimer
 This is by no means a great system. In fact I expect it to be so horrible and chaotic in the beginning. I would also like to add that this is an open-source project under the CC0 1.0 Universal license, which means anyone can edit it, copy it, do whatever they want with it.
