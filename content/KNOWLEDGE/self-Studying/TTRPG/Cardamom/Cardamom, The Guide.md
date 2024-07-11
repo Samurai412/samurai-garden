@@ -1,6 +1,6 @@
 # Introduction
 
-![[Drawing 2024-06-25 14.57.03.excalidraw.png]]
+
 
 
 Cardamom's main goal is a complete roleplaying experience, to immerse the player in a whole new world. Not just rolling dice and levelling up. The main mechanic revolves around around creating custom cards for your character, this is what gives the characters' life (among other things). The idea of custom cards came up to me because I wasn't too happy with how TTRPGs are all about rolling dice. In Cardamom, dice still remain crucial, but they serve as a means to implement other mechanics, rather than being the main mechanic (More on this later)
