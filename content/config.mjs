@@ -6,7 +6,7 @@ const config = {
   showSidebar: true,
    title: "Samurai Garden",
   showEditLink: true,
-  editLinkRoot: "https://github.com/flowershow/flowershow/edit/main/content/",
+  editLinkRoot: "https://github.com/Samurai412/samurai-garden/edit/main/content/",
   navLinks: [{ href: "/blog", name: "Blog" }],
 
 };
