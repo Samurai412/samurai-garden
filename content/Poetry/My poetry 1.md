@@ -1,14 +1,22 @@
 
 ### Ascent
 Do I seem real to you?
+
 Rising to the heavens is what we do.
+
 Even when it's only me and you,
+
 Alone, we fight off the world,
+
 Making it work until the end.
 
+
 Our story just begins,
+
 For eternity, it remains.
+
 Utopia is what we seek,
+
 Systems shattered by us.
 
 ----
