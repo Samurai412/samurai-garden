@@ -1,10 +1,7 @@
----
-title: Some of my poetry 
-date: 2024-08-07
-authors: Samurai
----
 
-### Ascent
+
+
+## Ascent
 Do I seem real to you?
 Rising to the heavens is what we do.
 Even when it's only me and you,
