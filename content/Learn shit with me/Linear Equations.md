@@ -32,7 +32,7 @@ $\begin{align*}2x_1-x_3+2x_4&=0\\x_2+x_3&=1\\ x_1+3x_2-x_4&=1.\end{align*}$
 - 3 equations
 - 4 variables ($x_1\cdots x_4$)
 ---
-$\begin{align*}x_1-3x_2&=1\\x_2+x_3&=2\\x_1+x_3&=3\end{align*}$
+$$\begin{align*}x_1-3x_2&=1\\x_2+x_3&=2\\x_1+x_3&=3\end{align*}$$
 
 Try substituting $x_1=1, x_2=0, x_3=2$
 
