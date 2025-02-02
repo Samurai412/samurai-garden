@@ -5,7 +5,6 @@ import clsx from "clsx";
 import {
   useTableOfContents,
   collectHeadings,
-  Nav,
   Comments,
   Footer,
   EditThisPage,
@@ -27,7 +26,7 @@ interface Props extends React.PropsWithChildren {
   showEditLink: boolean;
   showSidebar: boolean;
   showToc: boolean;
-  nav: NavConfig;
+  nav: NavConfig; // We still accept nav to pull the title and links.
   author: AuthorConfig;
   theme: ThemeConfig;
   urlPath: string;
@@ -89,31 +88,38 @@ export const Layout: React.FC<Props> = ({
       </Head>
 
       <div className="min-h-screen bg-background dark:bg-background-dark">
-        {/* NAVBAR */}
+        {/* CUSTOM NAVBAR */}
+        <div
+          className={clsx(
+            "sticky top-0 z-50 w-full",
+            isScrolled
+              ? "dark:bg-background-dark/95 bg-background/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:dark:bg-background-dark/75"
+              : "dark:bg-background-dark bg-background"
+          )}
+        >
           <div className="h-[4rem] flex items-center justify-between max-w-8xl mx-auto p-4 md:px-8">
-            {/* Let Nav handle the title & default nav toggles */}
-            <Nav
-              title={nav.title}
-              logo={nav.logo}
-              links={nav.links}
-              search={nav.search}
-              social={nav.social}
-              defaultTheme={theme.defaultTheme}
-              themeToggleIcon={theme.themeToggleIcon}
-              version={nav.version}
-            >
-              {/* For desktop, you can optionally render the SiteToc in the Nav children */}
-              {showSidebar && (
-                <div className="hidden lg:block">
-                  <SiteToc currentPath={urlPath} nav={siteMap} />
-                </div>
-              )}
-            </Nav>
+            {/* Title */}
+            <div className="text-xl font-bold">
+              {nav.title}
+            </div>
 
-            {/* Hamburger button for off-canvas sidebar toggle on mobile only */}
+            {/* Right-side Links (if any) */}
+            <div className="hidden md:flex space-x-4">
+              {nav.links?.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium hover:text-blue-600"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+
+            {/* Hamburger button for off-canvas sidebar toggle on mobile */}
             {showSidebar && (
               <button
-                className="lg:hidden p-2"
+                className="md:hidden p-2"
                 onClick={() => setMobileSidebarOpen(true)}
                 aria-label="Open sidebar"
               >
@@ -139,7 +145,7 @@ export const Layout: React.FC<Props> = ({
         {showSidebar && (
           <div
             className={clsx(
-              "lg:hidden fixed inset-0 z-40 transition-transform duration-300 ease-in-out",
+              "md:hidden fixed inset-0 z-40 transition-transform duration-300 ease-in-out",
               mobileSidebarOpen ? "translate-x-0" : "-translate-x-full"
             )}
           >
@@ -190,7 +196,11 @@ export const Layout: React.FC<Props> = ({
             )}
           >
             {children}
+
+            {/* Edit This Page Link */}
             {showEditLink && editUrl && <EditThisPage url={editUrl} />}
+
+            {/* Page Comments */}
             {showComments && (
               <div
                 className="prose mx-auto pt-6 pb-6 text-center text-gray-700 dark:text-gray-300"
