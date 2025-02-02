@@ -7,8 +7,6 @@ const config = {
    title: "Samurai Garden",
   showEditLink: true,
   editLinkRoot: "https://github.com/Samurai412/samurai-garden/edit/main/",
-  navLinks: [{ href: "/blog", name: "Blog" }],
-
 };
 
 export default config;
