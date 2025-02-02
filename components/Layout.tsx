@@ -89,61 +89,6 @@ export const Layout: React.FC<Props> = ({
       </Head>
 
       <div className="min-h-screen bg-background dark:bg-background-dark">
-        {/* NAVBAR */}
-        <div
-          className={clsx(
-            "sticky top-0 z-50 w-full",
-            isScrolled
-              ? "dark:bg-background-dark/95 bg-background/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:dark:bg-background-dark/75"
-              : "dark:bg-background-dark bg-background"
-          )}
-        >
-          <div className="h-[4rem] flex items-center justify-between max-w-8xl mx-auto p-4 md:px-8">
-            <div className="flex items-center">
-              {/* Optionally, place your logo or title here */}
-              <span className="text-xl font-bold">{nav.title}</span>
-            </div>
-
-            {/* Hamburger button for mobile sidebar toggle */}
-            {showSidebar && (
-              <button
-                className="lg:hidden p-2"
-                onClick={() => setMobileSidebarOpen(true)}
-                aria-label="Open sidebar"
-              >
-                {/* Simple hamburger icon */}
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
-            )}
-
-            {/* Nav links, search, social icons, etc. */}
-            <Nav
-              title={nav.title}
-              logo={nav.logo}
-              links={nav.links}
-              search={nav.search}
-              social={nav.social}
-              defaultTheme={theme.defaultTheme}
-              themeToggleIcon={theme.themeToggleIcon}
-              version={nav.version}
-            >
-              {/* On large screens, show the SiteToc in the navbar if desired */}
-              {showSidebar && <SiteToc currentPath={urlPath} nav={siteMap} />}
-            </Nav>
-          </div>
-        </div>
 
         {/* Mobile Sidebar Overlay */}
         {showSidebar && (
