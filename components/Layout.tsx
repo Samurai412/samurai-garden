@@ -89,6 +89,59 @@ export const Layout: React.FC<Props> = ({
       </Head>
 
       <div className="min-h-screen bg-background dark:bg-background-dark">
+        {/* NAVBAR */}
+        <div
+          className={clsx(
+            "sticky top-0 z-50 w-full",
+            isScrolled
+              ? "dark:bg-background-dark/95 bg-background/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:dark:bg-background-dark/75"
+              : "dark:bg-background-dark bg-background"
+          )}
+        >
+          <div className="h-[4rem] flex items-center justify-between max-w-8xl mx-auto p-4 md:px-8">
+            {/* Let Nav handle the title & default nav toggles */}
+            <Nav
+              title={nav.title}
+              logo={nav.logo}
+              links={nav.links}
+              search={nav.search}
+              social={nav.social}
+              defaultTheme={theme.defaultTheme}
+              themeToggleIcon={theme.themeToggleIcon}
+              version={nav.version}
+            >
+              {/* For desktop, you can optionally render the SiteToc in the Nav children */}
+              {showSidebar && (
+                <div className="hidden lg:block">
+                  <SiteToc currentPath={urlPath} nav={siteMap} />
+                </div>
+              )}
+            </Nav>
+
+            {/* Hamburger button for off-canvas sidebar toggle on mobile only */}
+            {showSidebar && (
+              <button
+                className="lg:hidden p-2"
+                onClick={() => setMobileSidebarOpen(true)}
+                aria-label="Open sidebar"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            )}
+          </div>
+        </div>
 
         {/* Mobile Sidebar Overlay */}
         {showSidebar && (
@@ -98,7 +151,7 @@ export const Layout: React.FC<Props> = ({
               mobileSidebarOpen ? "translate-x-0" : "-translate-x-full"
             )}
           >
-            {/* Semi-transparent overlay for closing the sidebar */}
+            {/* Overlay to close the sidebar */}
             <div
               className="absolute inset-0 bg-black opacity-50"
               onClick={() => setMobileSidebarOpen(false)}
@@ -110,7 +163,6 @@ export const Layout: React.FC<Props> = ({
                 onClick={() => setMobileSidebarOpen(false)}
                 aria-label="Close sidebar"
               >
-                {/* Simple close (X) icon */}
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -137,7 +189,7 @@ export const Layout: React.FC<Props> = ({
           </div>
         )}
 
-        {/* Wrapper for main content and ToC */}
+        {/* Wrapper for Main Content and ToC */}
         <div className="max-w-8xl mx-auto px-4 md:px-8">
           <div
             className={clsx(
@@ -146,9 +198,7 @@ export const Layout: React.FC<Props> = ({
             )}
           >
             {children}
-            {/* Edit This Page Link */}
             {showEditLink && editUrl && <EditThisPage url={editUrl} />}
-            {/* Page Comments */}
             {showComments && (
               <div
                 className="prose mx-auto pt-6 pb-6 text-center text-gray-700 dark:text-gray-300"
