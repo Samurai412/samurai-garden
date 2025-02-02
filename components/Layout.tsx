@@ -90,14 +90,6 @@ export const Layout: React.FC<Props> = ({
 
       <div className="min-h-screen bg-background dark:bg-background-dark">
         {/* NAVBAR */}
-        <div
-          className={clsx(
-            "sticky top-0 z-50 w-full",
-            isScrolled
-              ? "dark:bg-background-dark/95 bg-background/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:dark:bg-background-dark/75"
-              : "dark:bg-background-dark bg-background"
-          )}
-        >
           <div className="h-[4rem] flex items-center justify-between max-w-8xl mx-auto p-4 md:px-8">
             {/* Let Nav handle the title & default nav toggles */}
             <Nav
